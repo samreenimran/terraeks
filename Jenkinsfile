@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('install') {
             steps {
-	      sh 'rm -rf /home/ec2-user/terra'
+	      sh 'sudo rm -rf /home/ec2-user/terra'
               sh 'sudo mkdir /home/ec2-user/terra'
               sh 'sudo cd /home/ec2-user/terra'
               sh 'sudo wget https://releases.hashicorp.com/terraform/0.12.23/terraform_0.12.23_linux_amd64.zip'
