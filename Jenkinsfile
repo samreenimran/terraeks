@@ -10,7 +10,7 @@ pipeline {
               sh 'sudo yum install unzip -y'
               sh 'sudo unzip terraform_0.12.23_linux_amd64.zip'
               sh 'sudo echo $"export PATH=\$PATH:$(pwd)" >> ~/.bash_profile'
-              sh 'sudo source ~/.bash_profile'
+              sh 'source ~/.bash_profile'
               echo 'terraform done'             
               sh  'sudo curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl'
 	         	  sh  'sudo curl -o kubectl.sha256 https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl.sha256'
