@@ -9,7 +9,7 @@ pipeline {
               sh 'sudo cd /home/ec2-user/terra'
               sh 'sudo wget https://releases.hashicorp.com/terraform/0.12.23/terraform_0.12.23_linux_amd64.zip'
               sh 'sudo yum install unzip -y'
-              sh 'sudo unzip terraform_0.12.23_linux_amd64.zip'
+              sh 'sudo unzip terraform_0.12.23_linux_amd64.zip -y'
               sh 'sudo echo $"export PATH=\$PATH:$(pwd)" >> ~/.bash_profile'
               sh 'source ~/.bash_profile'
               echo 'terraform done'             
