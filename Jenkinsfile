@@ -8,6 +8,7 @@ pipeline {
               sh 'sudo mkdir /home/ec2-user/terra'
               sh 'sudo cd /home/ec2-user/terra'
 	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform'
+	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform_0.12.23_linux_amd64.zip'
               sh 'sudo wget https://releases.hashicorp.com/terraform/0.12.23/terraform_0.12.23_linux_amd64.zip'
               sh 'sudo yum install unzip -y'
 	      echo 'unzip installed'
