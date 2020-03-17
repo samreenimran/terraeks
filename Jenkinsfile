@@ -23,6 +23,7 @@ pipeline {
               sh  'sudo chmod +x ./kubectl'
               sh  'sudo mkdir -p $HOME/bin && sudo cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin'
               sh  'echo "export PATH=$PATH:$HOME/bin" >> ~/.bashrc'
+	      sh  'source ~/.bashrc'
               sh  'sudo kubectl version --short --client'
               sh  'sudo mkdir ~/.kube'                                 
               sh  'sudo touch ~/.kube/config-eks'
