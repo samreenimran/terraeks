@@ -38,7 +38,7 @@ pipeline {
 	      echo 'iam done'
 	      sh 'aws-iam-authenticator version'
 	      sh ' rm -rf terraform-script-eks'
-	      sh 'https://github.com/Rohit123-Kumar/terraform-script-eks.git'
+	      sh 'git clone https://github.com/Rohit123-Kumar/terraform-script-eks.git'
 	      sh 'cd terraform-script-eks'
 	      sh 'terraform init'
 	      sh 'terraform plan'
