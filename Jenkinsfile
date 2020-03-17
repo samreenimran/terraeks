@@ -27,7 +27,7 @@ pipeline {
 	      sh  'source ~/.bashrc'
 	      sh  'source ~/.bash_profile'
               sh  'sudo kubectl version --short --client'
-              sh  'sudo mkdir ~/.kube'                                 
+              sh  'sudo rm -rf ~/.kube && sudo mkdir ~/.kube'                                 
               sh  'sudo touch ~/.kube/config-eks'
               echo 'kubectl done'
               sh  'sudo curl -o aws-iam-authenticator https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/aws-iam-authenticator'
