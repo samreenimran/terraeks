@@ -37,7 +37,7 @@ pipeline {
 	      sh  'sudo cp ./aws-iam-authenticator /usr/bin/aws-iam-authenticator && export PATH=$PATH:/usr/bin'
 	      echo 'iam done'
 	      sh 'aws-iam-authenticator version'
-		    
+	      sh ' rm -rf terraform-provider-aws'
 	      sh 'git clone https://github.com/terraform-providers/terraform-provider-aws.git'
 	      sh 'cd terraform-provider-aws/examples/eks-getting-started'
 	      sh 'terraform init'
