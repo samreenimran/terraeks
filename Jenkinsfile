@@ -21,7 +21,7 @@ pipeline {
 	         	  sh  'sudo curl -o kubectl.sha256 https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl.sha256'
               sh  'sudo openssl sha1 -sha256 kubectl'
               sh  'sudo chmod +x ./kubectl'
-              sh  'sudo mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin'
+              sh  'sudo mkdir -p $HOME/bin && sudo cp ./kubectl $HOME/bin/kubectl && sudo export PATH=$PATH:$HOME/bin'
               sh  'echo "export PATH=$PATH:$HOME/bin" >> ~/.bashrc'
               sh  'sudo kubectl version --short --client'
               sh  'sudo mkdir ~/.kube'                                 
