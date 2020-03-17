@@ -39,7 +39,7 @@ pipeline {
 	      sh 'aws-iam-authenticator version'
 	      sh 'sudo rm -rf terraform-script-eks'
 	      sh 'git clone https://github.com/Rohit123-Kumar/terraform-script-eks.git'
-	      sh 'cd terraform-script-eks'
+	      sh 'sudo cd terraform-script-eks'
 	      sh 'terraform init'
 	      sh 'terraform plan'
 	      sh 'terraform apply'
