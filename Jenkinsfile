@@ -16,7 +16,7 @@ pipeline {
 	      sh  'sudo cp ./terraform /usr/bin/terraform && export PATH=$PATH:/usr/bin'
 	      sh 'terraform --version'
               //sh 'sudo echo $"export PATH=\$PATH:$(pwd)" >> ~/.bash_profile'
-              sh 'source ~/.bash_profile'
+              //sh 'source ~/.bash_profile'
               echo 'terraform done'  
 		    		}
         	}
