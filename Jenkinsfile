@@ -55,7 +55,7 @@ pipeline {
 	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform init'
 	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform fmt'
 	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform validate'
-	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && export AWS_PROFILE=defult && terraform plan'
+	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && export AWS_PROFILE=default && terraform plan'
 	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform apply --auto-approve'
 		
 	    }
