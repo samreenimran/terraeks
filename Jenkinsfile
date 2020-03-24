@@ -49,7 +49,7 @@ pipeline {
 	 stage('create cluster') {
             steps {
 	      sh 'sudo rm -rf terraform-script-eks'
-	      sh 'git clone https://github.com/Rohit123-Kumar/terraform-script-eks.git'
+	      sh 'git clone https://github.com/samreenimran/terraform-script-eks.git'
 	      //sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks'
 	     // sh 'sudo ls -al'
 	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks && terraform init'
