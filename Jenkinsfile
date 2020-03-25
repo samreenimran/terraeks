@@ -59,6 +59,6 @@ pipeline {
 	      sh 'sudo /home/ec2-user/new/terraform apply --auto-approve /home/ec2-user/new'
 		
 	    }
-	 }*/
+	 }
     }
 }
