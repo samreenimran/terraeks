@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('install terraform') {
             steps {
-	      sh 'sudo rm -rf /root/terra'
-              sh 'sudo mkdir /root/terra'
-              sh 'sudo cd /root/terra'
+	      sh 'sudo rm -rf /home/ec2-user/terra'
+              sh 'sudo mkdir /home/ec2-user/terra'
+              sh 'sudo cd /home/ec2-user/terra'
 	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform'
 	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform_0.12.23_linux_amd64.zip'
               sh 'sudo wget https://releases.hashicorp.com/terraform/0.12.23/terraform_0.12.23_linux_amd64.zip'
@@ -48,15 +48,15 @@ pipeline {
 		}
 	 stage('create cluster') {
             steps {
-	      sh 'sudo rm -rf terraform-script-eks /root/terra'
-	      sh 'sudo rm -rf *;git clone https://github.com/samreenimran/terraform-script-eks.git /root/terra'
+	      sh 'sudo rm -rf terraform-script-eks /home/ec2-user/terra'
+	      sh 'sudo rm -rf *;git clone https://github.com/samreenimran/terraform-script-eks.git /home/ec2-user/terra'
 	      //sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks'
 	     // sh 'sudo ls -al'
-	      sh 'sudo ~/terra/terraform init /root/terra/'
-	      sh 'sudo ~/terra/terraform fmt /root/terra/'
-	      sh 'sudo ~/terra/terraform validate /root/terra/'
-	      sh 'sudo ls ~/terra; sudo ~/terra/terraform plan /root/terra'
-	      sh 'sudo ~/terra/terraform apply --auto-approve /root/terra/'
+	      sh 'sudo /home/ec2-user/terra/terraform init /home/ec2-user/terra'
+	      sh 'sudo /home/ec2-user/terra/terraform fmt /home/ec2-user/terra'
+	      sh 'sudo /home/ec2-user/terra/terraform validate /home/ec2-user/terra'
+	      sh 'sudo ls /home/ec2-user/terra; sudo ~/terra/terraform plan /home/ec2-user/terra'
+	      sh 'sudo /home/ec2-user/terra/terraform apply --auto-approve /home/ec2-user/terra'
 		
 	    }
 	 }
