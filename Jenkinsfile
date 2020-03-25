@@ -46,17 +46,17 @@ pipeline {
 	      sh 'aws-iam-authenticator version'
 	 			   }
 		}
-	 /*stage('create cluster') {
+	 stage('create cluster') {
             steps {
-	      sh 'sudo rm -rf terraform-script-eks /home/ec2-user/terra'
-	      sh 'sudo rm -rf *;git clone https://github.com/samreenimran/terraform-script-eks.git /home/ec2-user/terra'
+	      //sh 'sudo rm -rf terraform-script-eks /home/ec2-user/terra'
+	      sh 'sudo rm -rf *;git clone https://github.com/samreenimran/terraform-script-eks.git /home/ec2-user/new'
 	      //sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks'
 	     // sh 'sudo ls -al'
-	      sh 'sudo /home/ec2-user/terra/terraform init /home/ec2-user/terra'
-	      sh 'sudo /home/ec2-user/terra/terraform fmt /home/ec2-user/terra'
-	      sh 'sudo /home/ec2-user/terra/terraform validate /home/ec2-user/terra'
-	      sh 'sudo ls /home/ec2-user/terra; sudo ~/terra/terraform plan /home/ec2-user/terra'
-	      sh 'sudo /home/ec2-user/terra/terraform apply --auto-approve /home/ec2-user/terra'
+	      sh 'sudo /home/ec2-user/new/terraform init /home/ec2-user/new'
+	      sh 'sudo /home/ec2-user/new/terraform fmt /home/ec2-user/new'
+	      sh 'sudo /home/ec2-user/new/terraform validate /home/ec2-user/new'
+	      sh 'sudo ls /home/ec2-user/new; sudo ~/terra/terraform plan /home/ec2-user/new'
+	      sh 'sudo /home/ec2-user/new/terraform apply --auto-approve /home/ec2-user/new'
 		
 	    }
 	 }*/
