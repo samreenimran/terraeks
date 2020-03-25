@@ -7,7 +7,7 @@ pipeline {
 	      sh 'sudo rm -rf /home/ec2-user/new'
               sh 'sudo mkdir /home/ec2-user/new'
               sh 'sudo cd /home/ec2-user/new'
-	      /*sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform'
+	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform'
 	      sh 'sudo rm -rf /var/lib/jenkins/workspace/eks/terraform_0.12.23_linux_amd64.zip'
               sh 'sudo wget https://releases.hashicorp.com/terraform/0.12.23/terraform_0.12.23_linux_amd64.zip'
               sh 'sudo yum install unzip -y'
@@ -17,7 +17,7 @@ pipeline {
 	      sh 'terraform --version'
               //sh 'sudo echo $"export PATH=\$PATH:$(pwd)" >> ~/.bash_profile'
               //sh 'source ~/.bash_profile'
-              echo 'terraform done'*/  
+              echo 'terraform done'
 		    		}
         	}
 	/*stage('install kubectl') {
