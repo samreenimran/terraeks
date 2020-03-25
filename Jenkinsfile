@@ -20,7 +20,7 @@ pipeline {
               echo 'terraform done'
 		    		}
         	}
-	/*stage('install kubectl') {
+	stage('install kubectl') {
             steps {
               sh  'sudo curl -o kubectl https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl'
 	         	  sh  'sudo curl -o kubectl.sha256 https://amazon-eks.s3-us-west-2.amazonaws.com/1.14.6/2019-08-22/bin/linux/amd64/kubectl.sha256'
@@ -46,7 +46,7 @@ pipeline {
 	      sh 'aws-iam-authenticator version'
 	 			   }
 		}
-	 stage('create cluster') {
+	 /*stage('create cluster') {
             steps {
 	      sh 'sudo rm -rf terraform-script-eks /home/ec2-user/terra'
 	      sh 'sudo rm -rf *;git clone https://github.com/samreenimran/terraform-script-eks.git /home/ec2-user/terra'
