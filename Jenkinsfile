@@ -50,12 +50,12 @@ pipeline {
             steps {
 	      //sh 'sudo rm -rf terraform-script-eks /home/ec2-user/terra'
 	      sh 'sudo rm -rf *;git clone https://github.com/samreenimran/terraform-script-eks.git'
-	      sh 'cd /var/lib/jenkins/workspace/eks/terraform-script-eks'
-	      sh 'sudo cp * /home/ec2-user/new'
+	      sh 'sudo cp /var/lib/jenkins/workspace/eks/terraform-script-eks/* /home/ec2-user/new'
+	     // sh 'sudo cp * /home/ec2-user/new'
 	      sh 'sudo /home/ec2-user/new/terraform init /home/ec2-user/new'
 	      sh 'sudo /home/ec2-user/new/terraform fmt /home/ec2-user/new'
 	      sh 'sudo /home/ec2-user/new/terraform validate /home/ec2-user/new'
-	      sh 'sudo ls /home/ec2-user/new; sudo ~/terra/terraform plan /home/ec2-user/new'
+	      sh 'sudo ls /home/ec2-user/new; sudo  /home/ec2-user/new/terraform plan /home/ec2-user/new'
 	      sh 'sudo /home/ec2-user/new/terraform apply --auto-approve /home/ec2-user/new'
 		
 	    }
