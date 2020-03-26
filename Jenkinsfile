@@ -57,7 +57,7 @@ pipeline {
 	      sh 'sudo terraform validate /home/ec2-user/new'
 	      sh 'sudo terraform plan /home/ec2-user/new'
 	      sh 'sudo terraform apply --auto-approve /home/ec2-user/new'
-	      sh 'sudo terraform import aws_key_pair.demo ritu /home/ec2-user/new'
+	      sh 'sudo cd /home/ec2-user/new && terraform import aws_key_pair.demo ritu'
 		
 	    }
 	 }
