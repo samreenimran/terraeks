@@ -34,6 +34,7 @@ pipeline {
               sh  'sudo kubectl version --short --client'
               sh  'sudo rm -rf ~/.kube && sudo mkdir ~/.kube'                                 
               sh  'sudo touch ~/.kube/config-eks'
+	      sh  'export KUBECONFIG=~/.kube/config-eks'
               echo 'kubectl done'
 		    		}
         	}
