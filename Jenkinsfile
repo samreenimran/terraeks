@@ -55,13 +55,13 @@ pipeline {
 	      sh 'sudo cp -r /var/lib/jenkins/workspace/eks/terraform-script-eks/* /home/ec2-user/new'
 	      
 	     // sh 'sudo cp * /home/ec2-user/new'
-	      /*sh 'sudo terraform init /home/ec2-user/new'
+	      sh 'sudo terraform init /home/ec2-user/new'
 	      sh 'sudo terraform fmt /home/ec2-user/new'
 	      sh 'sudo terraform validate /home/ec2-user/new'
 	      sh 'sudo terraform plan /home/ec2-user/new'
 	      sh 'sudo terraform apply --auto-approve /home/ec2-user/new'
 	      //sh 'sudo terraform output config_map_aws_auth > configmap.yml'
-	      //sh 'kubectl apply -f configmap.yml'*/
+	      //sh 'kubectl apply -f configmap.yml'
 	    }
 	 }
     }
