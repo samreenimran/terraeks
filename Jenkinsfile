@@ -49,17 +49,17 @@ pipeline {
 		}
 	 stage('create cluster') {
             steps {
-	      sh 'sudo rm -rf /home/ec2-user/cred && sudo cd /root && sudo cd ../ && sudo cp ~/.aws/credentials /home/ec2-user/cred'
+	      //sh 'sudo rm -rf /home/ec2-user/cred && sudo cd /root && sudo cd ../ && sudo cp ~/.aws/credentials /home/ec2-user/cred'
 	      //sh 'sudo rm -rf terraform-script-eks /home/ec2-user/terra'
 	      sh 'sudo rm -rf *;git clone https://github.com/samreenimran/terraform-script-eks.git'
 	      sh 'sudo cp -r /var/lib/jenkins/workspace/eks/terraform-script-eks/* /home/ec2-user/new'
 	      
 	     // sh 'sudo cp * /home/ec2-user/new'
-	     /* sh 'sudo terraform init /home/ec2-user/new'
+	      sh 'sudo terraform init /home/ec2-user/new'
 	      sh 'sudo terraform fmt /home/ec2-user/new'
 	      sh 'sudo terraform validate /home/ec2-user/new'
 	      sh 'sudo terraform plan /home/ec2-user/new'
-	      sh 'sudo terraform apply --auto-approve /home/ec2-user/new'*/
+	      sh 'sudo terraform apply --auto-approve /home/ec2-user/new'
 	      //sh 'sudo terraform output config_map_aws_auth > configmap.yml'
 	      //sh 'kubectl apply -f configmap.yml'
 	    }
